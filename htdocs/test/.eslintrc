@@ -1,0 +1,19 @@
+{
+    "extends": [
+        "dq",
+        "plugin:lodash-fp/recommended"
+    ],
+    "rules": {
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 0,
+        "no-use-before-define": 0,
+        "lodash-fp/prefer-identity": 0
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "allowImportExportEverywhere": true
+    },
+    "plugins": [
+        "lodash-fp"
+    ]
+}

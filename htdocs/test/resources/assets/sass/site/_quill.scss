@@ -1,0 +1,67 @@
+/*
+    Quill editor custom styles
+*/
+
+.ql-uploadcare {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAYAAAAmlE46AAAA0ElEQVQ4T6XRO05CURSF4Y85SKUT8FFohdhAHINGWpXKxIBOQJwASkyoAFuMjsFo46PSwscEoNI5aE5yb8duuKc8Z//591qnhD88oo4Ozsw+59n7A2qlDHzHMQ6wH4DXGOEK6zkYzMbXOTjBDbZQDcaf8YQ9LOXg3Bl/s4JWsBwYv/GVisFC4Ywv2MUpTgLjBbq4xWZufEUDbbQCsIdLjFEpvOoP7rGG1cD4iQ9so1z4O6a4S6HT/oEx9ZBK3MFi4YxvOEITh4FxiAH62Jg74z8vbUAB4smGpAAAAABJRU5ErkJggg==") !important;
+	background-repeat: no-repeat !important;
+	width: 14px !important;
+	height: 16px !important;
+	display: inline-block;
+	margin-top: 4px;
+	margin-left: 5px;
+}
+
+.popover {
+	display: block;
+}
+
+.ql-custom-underline[value="double"]:after {
+	content: "D";
+}
+
+.ql-custom-underline[value="wavy"]:after {
+	content: "W";
+	text-decoration-color: inherit !important;
+}
+
+.ql-custom-underline-double, .ql-custom-underline[value="double"]:after {
+	text-decoration-line: underline;
+	text-decoration-style: double;
+	-webkit-text-decoration-style: double;
+}
+
+.ql-custom-underline-wavy, .ql-custom-underline[value="wavy"]:after {
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+	-webkit-text-decoration-style: wavy;
+	text-decoration-color: red;
+}
+
+/* IE support */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .ql-custom-underline-double, .ql-custom-underline[value="double"]:after {
+		border-bottom: double 3px;
+    }
+
+    .ql-custom-underline-wavy, .ql-custom-underline[value="wavy"]:after {
+		background: url(data:image/gif;base64,R0lGODlhBAADAIABAP8AAP///yH5BAEAAAEALAAAAAAEAAMAAAIFRB5mGQUAOw==) repeat-x 100% 100%;
+		padding-bottom: 2px;
+		text-decoration: none;
+		white-space: nowrap;
+    }
+}
+
+/* MS Edge support */
+@supports (-ms-ime-align:auto) {
+    .ql-custom-underline-double, .ql-custom-underline[value="double"]:after {
+		border-bottom: double 3px;
+    }
+
+    .ql-custom-underline-wavy, .ql-custom-underline[value="wavy"]:after {
+		background: url(data:image/gif;base64,R0lGODlhBAADAIABAP8AAP///yH5BAEAAAEALAAAAAAEAAMAAAIFRB5mGQUAOw==) repeat-x 100% 100%;
+		padding-bottom: 2px;
+		text-decoration: none;
+		white-space: nowrap;
+    }
+}

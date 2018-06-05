@@ -1,0 +1,52 @@
+/*
+    Button styles
+*/
+
+.btn {
+	border: none;
+	display: inline-block;
+	padding: 5px 10px;
+	color: $white;
+	border-radius: 4px;
+	text-align: center;
+	background: none;
+	cursor: pointer;
+	&:hover {
+		color: $white;
+	}
+	&.full-width {
+		width: 100%;
+	}
+	&.btn-black {
+		background: $secondary;
+		padding: 5px 15px;
+		border-radius: 4px;
+		&.simple {
+			padding: 5px 10px;
+		}
+	}
+	&.btn-green {
+		background: $green;
+	}
+	&.btn-sky {
+		background: $sky;
+	}
+	&.btn-blue {
+		background: $blue;
+	}
+	&.large {
+		font-size: 1.1em;
+		padding: 10px;
+	}
+	&.btn-icon {
+		position: relative;
+		padding-left: 55px;
+		line-height: 1em;
+		text-align: left;
+		img {
+			position: absolute;
+			top: calc(50% - 15px);
+			left: 15px;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  height: 100vh;
+  margin: 0;
+}
+
+.table-selectable tbody tr {
+  cursor: pointer;
+}
+
+.top10 {
+  margin-top: 10px;
+}
+
+.top15 {
+  margin-top: 15px;
+}
+
+.bottom15 {
+  margin-bottom: 15px;
+}
+
+.datepicker {
+  display: block !important;
+}

@@ -1,0 +1,57 @@
+# Use phusion/baseimage as base image. To make your builds
+# reproducible, make sure you lock down to a specific version, not
+# to `latest`! See
+# https://github.com/phusion/baseimage-docker/blob/master/Changelog.md
+# for a list of version numbers.
+FROM phusion/baseimage:0.9.22
+ENV DEBIAN_FRONTEND noninteractive
+
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]
+
+# ...put your own build instructions here...
+
+# Clean up APT when done.
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+	apt-get update && apt-get install -y \
+        libapache2-mod-php \
+        openssh-server \
+        libfreetype6-dev \
+        libmcrypt-dev \
+        libpng12-dev \
+        curl \
+        git \
+        wget \
+        libcurl3-dev \
+        libicu-dev \
+        libxml2 \
+        libxml2-dev \
+        libxslt1-dev \
+        libxslt-dev \
+        vim-tiny \
+        mysql-client php-xml zip unzip php-zip iputils-ping \
+		libmagickwand-dev imagemagick bzip2 php apache2 php-mysql php-mbstring php-curl php-pgsql \
+	&& rm -rf /var/www/html \
+	&& curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh && chmod +x nodesource_setup.sh && ./nodesource_setup.sh \
+	&& apt-get install -y nodejs \
+	&& npm install -g gulp-cli grunt-cli node-sass \
+	&& php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
+	&& php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" \
+	&& php composer-setup.php --install-dir=/usr/bin \
+	&& ln -s /usr/bin/composer.phar /usr/bin/composer \
+	&& chmod +x /usr/bin/composer \
+	&& php -r "unlink('composer-setup.php');"
+ADD . /var/www
+RUN ln -s /var/www/public /var/www/html
+RUN mkdir /var/www/.composer && chown -R www-data /var/www/
+USER www-data
+ARG branch
+RUN cd /var/www/ && cp .env.$branch .env
+RUN cd /var/www/ && composer install
+RUN cd /var/www/ && npm install
+RUN cd /var/www/ && npm run dev
+RUN cd /var/www/ && php artisan migrate
+	
+
+

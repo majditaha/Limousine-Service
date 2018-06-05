@@ -1,0 +1,93 @@
+/*
+    Connected all styles
+*/
+
+// Bootstrap styles
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
+@import "bootstrap/reboot";
+@import "bootstrap/glyphicons";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/images";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "bootstrap/transitions";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdown";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-group";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-group";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/custom-forms";
+@import "bootstrap/nav";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/card";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumb";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pagination";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badge";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/alert";
+@import "bootstrap/progress";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/media";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/modal";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popover";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+@import "bootstrap/utilities";
+
+@import "~noty/src/noty";
+
+// Secondary
+@import "fonts";
+@import "colors";
+@import "buttons";
+
+// Libs
+
+// Main
+@import "general";
+@import "sections";
+@import "media";
+
+// Quill editor styles
+@import url("//cdn.quilljs.com/1.3.3/quill.snow.css");
+@import "quill";
+@import "jquery.reject";
+@import "custom";
+
+.rounded-image {
+    border-radius: 50%;
+}
+
+.top15 {
+    margin-top: 15px;
+}
+
+.alert {
+    background: none;
+
+    &.error {
+        background: #ffd3d0;
+    }
+
+    &.warning {
+        background: #ffbc5e;
+    }
+
+    &.success {
+        background: #6ebf6e;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

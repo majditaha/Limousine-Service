@@ -1,0 +1,52 @@
+/*
+    Copied from http://fonts.fontstorage.com/import/clearsans.css
+*/
+
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans Thin'), local('ClearSans-Thin'), url('//hb.bizmrg.com/fonts/clearsans/200.woff2') format('woff2'), url('//hb.bizmrg.com/fonts/clearsans/200.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans Light'), local('ClearSans-Light'), url('//hb.bizmrg.com/fonts/clearsans/300.woff2') format('woff2'), url('//hb.bizmrg.com/fonts/clearsans/300.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans'), local('ClearSans'), url('//hb.bizmrg.com/fonts/clearsans/400.woff2') format('woff2'), url('//hb.bizmrg.com/fonts/clearsans/400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans Italic'), local('ClearSans-Italic'), url('//hb.bizmrg.com/fonts/clearsans/400i.woff2') format('woff2'), url('//hb.bizmrg.com/fonts/clearsans/400i.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans Medium'), local('ClearSans-Medium'), url('//hb.bizmrg.com/fonts/clearsans/500.woff2') format('woff2'), url('//hb.bizmrg.com/fonts/clearsans/500.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans Medium Italic'), local('ClearSans-MediumItalic'), url('//hb.bizmrg.com/fonts/clearsans/500i.woff2') format('woff2'), url('//hb.bizmrg.com/fonts/clearsans/500i.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans Bold'), local('ClearSans-Bold'), url('//hb.bizmrg.com/fonts/clearsans/700.woff2') format('woff2'), url('//hb.bizmrg.com/fonts/clearsans/700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clear Sans';
+    src: local('Clear Sans Bold Italic'), local('ClearSans-BoldItalic'), url('//hb.bizmrg.com/fonts/clearsans/700i.woff2') format('woff2'), url('//hb.bizmrg.com/fonts/clearsans/700i.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
